@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.star.topbar.TopBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topBar"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    app:leftBackground="@drawable/blue_button"
+    app:leftText="@string/back"
+    app:leftTextColor="#FFFFFF"
+    app:rightBackground="@drawable/blue_button"
+    app:rightText="@string/more"
+    app:rightTextColor="#FFFFFF"
+    app:title="@string/title"
+    app:titleTextColor="#123456"
+    app:titleTextSize="15sp">
+
+</com.star.topbar.TopBar>
