@@ -108,6 +108,7 @@ public class TopBar extends RelativeLayout {
     }
 
     public void setButtonVisiable(TopBarButton myButton, boolean flag) {
+
         switch (myButton) {
             case LEFT_BUTTON:
                 mLeftButton.setVisibility(flag ? View.VISIBLE : View.GONE);
@@ -118,6 +119,7 @@ public class TopBar extends RelativeLayout {
             default:
                 break;
         }
+
     }
 
     public void setOnTopbarClickListener(OnTopbarClickListener onTopbarClickListener) {
