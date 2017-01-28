@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mTopBar.setButtonVisiable(TopBar.TopBarButton.LEFT_BUTTON, true);
-        mTopBar.setButtonVisiable(TopBar.TopBarButton.RIGHT_BUTTON, true);
+        mTopBar.setButtonVisible(TopBar.TopBarButton.LEFT_BUTTON, true);
+        mTopBar.setButtonVisible(TopBar.TopBarButton.RIGHT_BUTTON, true);
     }
 
 }

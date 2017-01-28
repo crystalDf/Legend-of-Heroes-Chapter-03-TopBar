@@ -107,7 +107,7 @@ public class TopBar extends RelativeLayout {
 
     }
 
-    public void setButtonVisiable(TopBarButton myButton, boolean flag) {
+    public void setButtonVisible(TopBarButton myButton, boolean flag) {
 
         switch (myButton) {
             case LEFT_BUTTON:
@@ -127,8 +127,8 @@ public class TopBar extends RelativeLayout {
     }
 
     public interface OnTopbarClickListener {
-        public void leftClick();
-        public void rightClick();
+        void leftClick();
+        void rightClick();
     }
 
 }
