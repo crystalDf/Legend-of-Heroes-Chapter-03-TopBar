@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         mTopBar = (TopBar) findViewById(R.id.topBar);
 
-        mTopBar.setOnTopbarClickListener(new TopBar.OnTopbarClickListener() {
+        mTopBar.setOnTopBarClickListener(new TopBar.OnTopBarClickListener() {
             @Override
             public void leftClick() {
                 Toast.makeText(MainActivity.this, "left", Toast.LENGTH_LONG).show();

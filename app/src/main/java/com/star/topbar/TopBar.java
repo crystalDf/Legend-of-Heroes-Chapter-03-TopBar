@@ -35,7 +35,7 @@ public class TopBar extends RelativeLayout {
     private int mTitleTextColor;
     private String mTitle;
 
-    private OnTopbarClickListener mOnTopbarClickListener;
+    private OnTopBarClickListener mOnTopbarClickListener;
 
     public TopBar(Context context) {
         super(context);
@@ -122,11 +122,11 @@ public class TopBar extends RelativeLayout {
 
     }
 
-    public void setOnTopbarClickListener(OnTopbarClickListener onTopbarClickListener) {
-        mOnTopbarClickListener = onTopbarClickListener;
+    public void setOnTopBarClickListener(OnTopBarClickListener onTopBarClickListener) {
+        mOnTopbarClickListener = onTopBarClickListener;
     }
 
-    public interface OnTopbarClickListener {
+    public interface OnTopBarClickListener {
         void leftClick();
         void rightClick();
     }
