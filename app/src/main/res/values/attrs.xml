@@ -2,9 +2,9 @@
 <resources>
 
     <declare-styleable name="TopBar">
-        <attr name="title" format="string"/>
-        <attr name="titleTextSize" format="dimension"/>
-        <attr name="titleTextColor" format="color"/>
+        <attr name="myTitle" format="string"/>
+        <attr name="myTitleTextSize" format="dimension"/>
+        <attr name="myTitleTextColor" format="color"/>
         <attr name="leftTextColor" format="color"/>
         <attr name="leftBackground" format="reference|color"/>
         <attr name="leftText" format="string"/>

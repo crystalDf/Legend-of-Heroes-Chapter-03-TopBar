@@ -19,9 +19,9 @@ public class TopBar extends RelativeLayout {
     private Button mRightButton;
     private TextView mTitleTextView;
 
-    private LayoutParams mLeftParams;
-    private LayoutParams mRightParams;
-    private LayoutParams mTitleParams;
+    private LayoutParams mLeftLayoutParams;
+    private LayoutParams mRightLayoutParams;
+    private LayoutParams mTitleLayoutParams;
 
     private int mLeftTextColor;
     private Drawable mLeftBackground;
@@ -35,16 +35,10 @@ public class TopBar extends RelativeLayout {
     private int mTitleTextColor;
     private String mTitle;
 
-    private OnTopBarClickListener mOnTopbarClickListener;
-
-    public TopBar(Context context) {
-        super(context);
-    }
+    private OnTopBarClickListener mOnTopBarClickListener;
 
     public TopBar(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-        setBackgroundColor(0xFFF59563);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.Toolbar);
 
@@ -56,9 +50,9 @@ public class TopBar extends RelativeLayout {
         mRightBackground = typedArray.getDrawable(R.styleable.TopBar_rightBackground);
         mRightText = typedArray.getString(R.styleable.TopBar_rightText);
 
-//        mTitleTextSize = typedArray.getDimension(R.styleable.TopBar_titleTextSize, 10);
-        mTitleTextColor = typedArray.getColor(R.styleable.TopBar_titleTextColor, 0);
-        mTitle = typedArray.getString(R.styleable.TopBar_title);
+        mTitleTextSize = typedArray.getDimension(R.styleable.TopBar_myTitleTextSize, 10);
+        mTitleTextColor = typedArray.getColor(R.styleable.TopBar_myTitleTextColor, 0);
+        mTitle = typedArray.getString(R.styleable.TopBar_myTitle);
 
         typedArray.recycle();
 
@@ -76,35 +70,34 @@ public class TopBar extends RelativeLayout {
 
         mTitleTextView.setText(mTitle);
         mTitleTextView.setTextColor(mTitleTextColor);
-//        mTitleTextView.setTextSize(mTitleTextSize);
+        mTitleTextView.setTextSize(mTitleTextSize);
         mTitleTextView.setGravity(Gravity.CENTER);
 
-        mLeftParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        mLeftParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);
-        addView(mLeftButton, mLeftParams);
+        mLeftLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        mLeftLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);
+        addView(mLeftButton, mLeftLayoutParams);
 
-        mRightParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        mRightParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
-        addView(mRightButton, mRightParams);
+        mRightLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        mRightLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
+        addView(mRightButton, mRightLayoutParams);
 
-        mTitleParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        mTitleParams.addRule(RelativeLayout.CENTER_IN_PARENT, TRUE);
-        addView(mTitleTextView, mTitleParams);
+        mTitleLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        mTitleLayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, TRUE);
+        addView(mTitleTextView, mTitleLayoutParams);
 
         mLeftButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOnTopbarClickListener.leftClick();
+                mOnTopBarClickListener.leftClick();
             }
         });
 
         mRightButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOnTopbarClickListener.rightClick();
+                mOnTopBarClickListener.rightClick();
             }
         });
-
     }
 
     public void setButtonVisible(TopBarButton myButton, boolean flag) {
@@ -123,7 +116,7 @@ public class TopBar extends RelativeLayout {
     }
 
     public void setOnTopBarClickListener(OnTopBarClickListener onTopBarClickListener) {
-        mOnTopbarClickListener = onTopBarClickListener;
+        mOnTopBarClickListener = onTopBarClickListener;
     }
 
     public interface OnTopBarClickListener {
