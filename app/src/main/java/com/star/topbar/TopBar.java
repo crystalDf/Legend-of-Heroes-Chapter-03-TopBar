@@ -40,7 +40,7 @@ public class TopBar extends RelativeLayout {
     public TopBar(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.Toolbar);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TopBar);
 
         mLeftTextColor = typedArray.getColor(R.styleable.TopBar_leftTextColor, 0);
         mLeftBackground = typedArray.getDrawable(R.styleable.TopBar_leftBackground);
