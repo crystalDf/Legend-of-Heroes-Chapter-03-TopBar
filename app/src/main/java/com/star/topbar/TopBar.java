@@ -50,9 +50,9 @@ public class TopBar extends RelativeLayout {
         mRightBackground = typedArray.getDrawable(R.styleable.TopBar_rightBackground);
         mRightText = typedArray.getString(R.styleable.TopBar_rightText);
 
-        mTitleTextSize = typedArray.getDimension(R.styleable.TopBar_myTitleTextSize, 10);
-        mTitleTextColor = typedArray.getColor(R.styleable.TopBar_myTitleTextColor, 0);
-        mTitle = typedArray.getString(R.styleable.TopBar_myTitle);
+        mTitleTextSize = typedArray.getDimension(R.styleable.TopBar_titleTextSize, 10);
+        mTitleTextColor = typedArray.getColor(R.styleable.TopBar_titleTextColor, 0);
+        mTitle = typedArray.getString(R.styleable.TopBar_title);
 
         typedArray.recycle();
 

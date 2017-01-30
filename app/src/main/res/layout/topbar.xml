@@ -11,8 +11,8 @@
     app:rightBackground="@drawable/blue_button"
     app:rightText="@string/more"
     app:rightTextColor="#FFFFFF"
-    app:myTitle="@string/title"
-    app:myTitleTextColor="#123456"
-    app:myTitleTextSize="15sp">
+    app:title="@string/title"
+    app:titleTextColor="#123456"
+    app:titleTextSize="5sp">
 
 </com.star.topbar.TopBar>
